@@ -1,9 +1,9 @@
    ========================================================================
-      ____   ___  ____ _____ _____ ___  _     ___ ___     ____ _   _ _____ 
-     |  _ \ / _ \|  _ \_   _|  ___/ _ \| |   |_ _/ _ \   / ___| | | |_   _|
-     | |_) | | | | |_) || | | |_ | | | | |    | | | | | | |   | | | | | |  
-     |  __/| |_| |  _ < | | |  _|| |_| | |___ | | |_| | | |___| |_| | | |  
-     |_|    \___/|_| \_\|_| |_|   \___/|_____|___\___/   \____|\___/  |_|  
+       ____   ___  ____ _____ _____ ___  _     ___ ___     ____ _   _ _____ 
+      |  _ \ / _ \|  _ \_   _|  ___/ _ \| |   |_ _/ _ \   / ___| | | |_   _|
+      | |_) | | | | |_) || | | |_ | | | | |    | | | | | | |   | | | | | |  
+      |  __/| |_| |  _ < | | |  _|| |_| | |___ | | |_| | | |___| |_| | | |  
+      |_|    \___/|_| \_\|_| |_|   \___/|_____|___\___/   \____|\___/  |_|  
     ========================================================================
 Advanced Artificial Intelligence & Systems Engineering Portfolio
 
@@ -58,29 +58,30 @@ Stand on a practical engineering philosophy rooted in consistency, adaptability,
      |   / _|  __/| (_) |  \__ \ | | |   /| |_| | (__  | | | |_| |   /| _| 
      |_|_\___|_|   \___/   |___/ |_| |_|_\ \___/ \___| |_|  \___/|_|_\|___|
 
-portfolio/
-│
-├── artificial-intelligence/
-├── machine-learning/
-├── deep-learning/
-├── natural-language-processing/
-├── computer-vision/
-├── robotics-ros/
-├── cybersecurity-ai/
-├── data-science/
-├── digital-twins/
-├── virtualization/
-├── cloud-computing/
-├── databases/
-├── unix-linux/
-├── notebooks/
-├── simulations/
-├── presentations/
-├── video-lab-reports/
-├── research-materials/
-├── bibliography/
-├── documentation/
-└── final-projects/
+    portfolio/
+    │
+    ├── artificial-intelligence/
+    ├── machine-learning/
+    ├── deep-learning/
+    ├── natural-language-processing/
+    ├── computer-vision/
+    ├── robotics-ros/
+    ├── cybersecurity-ai/
+    ├── data-science/
+    ├── digital-twins/
+    ├── virtualization/
+    ├── cloud-computing/
+    ├── databases/
+    ├── unix-linux/
+    ├── notebooks/
+    ├── simulations/
+    ├── presentations/
+    ├── video-lab-reports/
+    ├── research-materials/
+    ├── bibliography/
+    ├── documentation/
+    └── final-projects/
+
 Portfolio Components
 1. Jupyter Notebooks
 What’s in 'em:
