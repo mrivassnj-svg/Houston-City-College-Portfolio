@@ -1,13 +1,31 @@
+========================================================================
+  ____   ___  ____ _____ _____ ___  _     ___ ___     ____ _   _ _____ 
+ |  _ \ / _ \|  _ \_   _|  ___/ _ \| |   |_ _/ _ \   / ___| | | |_   _|
+ | |_) | | | | |_) || | | |_ | | | | |    | | | | | | |   | | | | | |  
+ |  __/| |_| |  _ < | | |  _|| |_| | |___ | | |_| | | |___| |_| | | |  
+ |_|    \___/|_| \_\|_| |_|   \___/|_____|___\___/   \____|\___/  |_|  
+========================================================================
 Advanced Artificial Intelligence & Systems Engineering Portfolio
-Overview
+
+___  __     _______ ______     _____ _______        __
+      / _ \ \ \   / / ____|  _ \ \   / /_ _| ____\ \      / /
+     | | | | \ \ / /|  _| | |_) \ \ / / | ||  _|  \ \ /\ / / 
+     | |_| |  \ V / | |___|  _ < \ V /  | || |___  \ V  V /  
+      \___/    \_/  |_____|_| \_\ \_/  |___|_____|  \_/\_/
+
+
 This repo is the whole blueprint. It’s a deep-dive technical portfolio documenting all the academic research, engineering projects, infrastructure builds, and applied systems work put down across the AI and IT curriculum.
 
 This ain’t just schoolwork—this is real-world, hands-on engineering born out of constant labbin', troubleshooting, system integration, and making things work out in the wild. The work in here shows more than just knowing the theory; it shows the discipline to build a system, break it, tweak it, and rebuild it from the ground up until it’s running solid under pressure.
 
 In tech and in life, you only progress through iteration, pressure, adaptation, and holding yourself accountable. This portfolio is that exact mindset put into action—continuous growth, technical resilience, and handling business when problems pop up.
 
-What’s inside the repo:
 
+____ ___  __  __ ____   ___  _   _ _____ _   _ _____ ____  
+ / ___/ _ \|  \/  |  _ \ / _ \| \ | | ____| \ | |_   _/ ___| 
+| |  | | | | |\/| | |_) | | | |  \| |  _| |  \| | | | \___ \ 
+| |__| |_| | |  | |  __/| |_| | |\  | |___| |\  | | |  ___) |
+ \____\___/|_|  |_|_|    \___/|_| \_|_____|_| \_| |_| |____/
 Jupyter Notebooks: Step-by-step project builds and finalized technical code.
 
 Infrastructure & Labs: Virtualization environments, machine learning tests, AI workflows, and sysadmin projects.
