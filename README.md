@@ -53,11 +53,11 @@ Lock in long-term discipline when it comes to technical documentation and portfo
 
 Stand on a practical engineering philosophy rooted in consistency, adaptability, accountability, and never stopping the grind.
 
-___ ___ ___   ___     ___ _____ ___  _   _  ___ _____ _   _ ___  ___ 
- | _ \ __| _ \ / _ \   / __|_   _| _ \| | | |/ __|_   _| | | | _ \| __|
- |   / _|  __/| (_) |  \__ \ | | |   /| |_| | (__  | | | |_| |   /| _| 
- |_|_\___|_|   \___/   |___/ |_| |_|_\\___/ \___| |_|  \___/|_|_\|___|
-Plaintext
+      ___ ___ ___   ___     ___ _____ ___  _   _  ___ _____ _   _ ___  ___ 
+     | _ \ __| _ \ / _ \   / __|_   _| _ \| | | |/ __|_   _| | | | _ \| __|
+     |   / _|  __/| (_) |  \__ \ | | |   /| |_| | (__  | | | |_| |   /| _| 
+     |_|_\___|_|   \___/   |___/ |_| |_|_\ \___/ \___| |_|  \___/|_|_\|___|
+
 portfolio/
 │
 ├── artificial-intelligence/
