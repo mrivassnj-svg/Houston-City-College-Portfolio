@@ -1,185 +1,98 @@
-   ========================================================================
-       ____   ___  ____ _____ _____ ___  _     ___ ___     ____ _   _ _____ 
-      |  _ \ / _ \|  _ \_   _|  ___/ _ \| |   |_ _/ _ \   / ___| | | |_   _|
-      | |_) | | | | |_) || | | |_ | | | | |    | | | | | | |   | | | | | |  
-      |  __/| |_| |  _ < | | |  _|| |_| | |___ | | |_| | | |___| |_| | | |  
-      |_|    \___/|_| \_\|_| |_|   \___/|_____|___\___/   \____|\___/  |_|  
-    ========================================================================
-Advanced Artificial Intelligence & Systems Engineering Portfolio
+---
+title: "Module 01: Introduction to Computer Vision"
+module_id: "01"
+course_slos: "SLOs 1, 2"
+generated_at_utc: "2026-08-08T22:50:21Z"
+research_status: "protocol-design"
+---
+
+# Module 01: Introduction to Computer Vision
+
+## Executive Abstract
+
+This module is designed as a reproducible empirical investigation within a Computer Vision and Robotics research portfolio. The objective is not merely to demonstrate an implementation, but to evaluate technical claims under an explicit protocol, document uncertainty, and make design trade-offs auditable.
+
+## Research Question
+
+> Evaluate preprocessing latency and quantify face/PII anonymization utility-privacy trade-offs.
+
+## Falsifiable Hypothesis
+
+**H1:** The optimized or proposed configuration will improve the primary task metric relative to the baseline while preserving a pre-specified operational constraint on latency, memory, robustness, or calibration.
+
+**H0:** Any observed performance difference between configurations is not practically meaningful under the established evaluation protocol.
+
+## Technical Scope
+
+- **Course SLOs:** SLOs 1, 2
+- **Technology stack:** OpenCV; PIL; Ethics Frameworks
+- **Mechanics under study:** CV pipeline design, classical and modern workflows, ethics, privacy, bias evaluation.
+- **Primary investigation:** Evaluate preprocessing latency and quantify face/PII anonymization utility-privacy trade-offs.
+
+## Experimental Design
+
+| Component | Specification |
+|---|---|
+| Unit of analysis | Image, frame, track, prompt-image pair, or agent decision event |
+| Baseline | Simplest defensible reference implementation |
+| Treatment | Optimized, fine-tuned, or alternative architecture |
+| Controls | Dataset split, seed, hardware, preprocessing, and stopping criteria |
+| Replications | Minimum 3 runs when computationally feasible |
+| Primary metric | Task-specific metric defined before final evaluation |
+| Secondary metrics | Latency, memory, throughput, calibration, fairness, robustness |
+| Statistical reporting | Mean, standard deviation, confidence interval, and effect size |
+| Error analysis | Stratified failure analysis by domain, scale, lighting, class, or motion |
+
+## Evaluation Protocol
+
+1. Freeze the dataset manifest and data split before comparative training.
+2. Run the baseline and candidate systems under matched hardware and input conditions.
+3. Capture configuration, seed, package versions, Git commit, wall-clock time, and resource use.
+4. Aggregate repeated runs and report uncertainty rather than a single best run.
+5. Inspect qualitative failures and document conditions under which the system should not be used.
+
+## Benchmark Matrix
+
+| Variant | Dataset Version | Seed | Latency (ms) | Throughput | Primary Metric | 95% CI | Memory | Notes |
+|---|---|---:|---:|---:|---:|---:|---:|---|
+| Baseline | TBD | TBD | TBD | TBD | TBD | TBD | TBD | Reference implementation |
+| Candidate A | TBD | TBD | TBD | TBD | TBD | TBD | TBD | Proposed improvement |
+| Candidate B | TBD | TBD | TBD | TBD | TBD | TBD | TBD | Ablation or deployment variant |
+
+## Reproducibility Checklist
+
+- [ ] Dataset source, license, consent constraints, and checksum documented
+- [ ] Train/validation/test split versioned and leakage-reviewed
+- [ ] Configuration committed in `configs/`
+- [ ] Random seeds fixed and recorded
+- [ ] Environment and hardware captured
+- [ ] Raw run logs saved in `results/`
+- [ ] Aggregate tables and plots exported to `figures/` and `reports/`
+- [ ] Failure cases and limitations documented
+- [ ] Privacy, bias, and misuse risks assessed
+
+## Responsible AI and Governance
+
+Assess dataset representativeness, annotation quality, privacy risk, disparate error rates, confidence calibration, and deployment failure modes. For human-centered or surveillance-adjacent applications, avoid claiming suitability without context-specific validation, lawful data handling, and meaningful human oversight.
+
+## Directory Contract
+
+| Path | Purpose |
+|---|---|
+| `configs/` | Versioned experiment configurations |
+| `data/` | Raw, interim, processed, and external data references |
+| `src/` | Reusable implementation code |
+| `experiments/` | Experiment entrypoints and run manifests |
+| `results/` | Machine-readable metrics and run metadata |
+| `figures/` | Publication-quality visualizations |
+| `reports/` | Technical reports, analyses, and model cards |
+| `tests/` | Unit, integration, and regression tests |
+
+---
+Portfolio curator: Michael Anthony Rivas  
+Generated: 2026-08-08T22:50:21Z
+### 🔍 Extracted Implementation Evidence
+- **File:** `L02_Rivas_Michael_ITAI1378.ipynb` (Lines 157, 184) — Image I/O via `cv2.imread` / `cv2.imwrite`
+- **File:** `Lab05_CNN_Chihuahua_Muffin.ipynb` (Lines 1755, 1781, 1867) — Ethical Audit Framework (`EthicalAuditFramework`), Fairness Disparity Checks, and Privacy Impact Analysis
+- **File:** `Lab_06_Michael_Rivas (1).ipynb` (Line 1547) — Local-first & Privacy Protection Architecture
 
-___  __     _______ ______     _____ _______        __
-      / _ \ \ \   / / ____|  _ \ \   / /_ _| ____\ \      / /
-     | | | | \ \ / /|  _| | |_) \ \ / / | ||  _|  \ \ /\ / / 
-     | |_| |  \ V / | |___|  _ < \ V /  | || |___  \ V  V /  
-      \___/    \_/  |_____|_| \_\ \_/  |___|_____|  \_/\_/
-
-
-This repo is the whole blueprint. It’s a deep-dive technical portfolio documenting all the academic research, engineering projects, infrastructure builds, and applied systems work put down across the AI and IT curriculum.
-
-This ain’t just schoolwork—this is real-world, hands-on engineering born out of constant labbin', troubleshooting, system integration, and making things work out in the wild. The work in here shows more than just knowing the theory; it shows the discipline to build a system, break it, tweak it, and rebuild it from the ground up until it’s running solid under pressure.
-
-In tech and in life, you only progress through iteration, pressure, adaptation, and holding yourself accountable. This portfolio is that exact mindset put into action—continuous growth, technical resilience, and handling business when problems pop up.
-
-
-      ____ ___  __  __ ____   ___  _   _ _____ _   _ _____ ____  
-     / ___/ _ \|  \/  |  _ \ / _ \| \ | | ____| \ | |_   _/ ___| 
-    | |  | | | | |\/| | |_) | | | |  \| |  _| |  \| | | | \___ \ 
-    | |__| |_| | |  | |  __/| |_| | |\  | |___| |\  | | |  ___) |
-     \____\___/|_|  |_|_|    \___/|_| \_|_____|_| \_| |_| |____/
-Jupyter Notebooks: Step-by-step project builds and finalized technical code.
-
-Infrastructure & Labs: Virtualization environments, machine learning tests, AI workflows, and sysadmin projects.
-
-Research & Recs: Technical presentations, video lab demos, deep-dive research papers, and engineering notes/reflections.
-
-At the end of the day, this portfolio shows both the finished product and the ongoing grind—getting better every day through trial and error, disciplined study, heavy troubleshooting, and systems-level engineering.
-
-Portfolio Objectives
-The real goal of this repo is to:
-
-Show up and show out across AI, virtualization, cloud computing, systems engineering, cybersecurity, and data tech.
-
-Document the real matwork—hands-on deployment using the same tools, platforms, and infrastructure the industry uses.
-
-Put the process on display, taking things from a rough concept to full deployment through step-by-step engineering.
-
-Keep the paperwork tight with organized technical docs and workflows anybody can replicate.
-
-Build a professional body of work that stands up to scrutiny from academia, researchers, or industry heavyweights.
-
-Centralize the toolkit—keeping all educational resources, research references, and study guides in one spot.
-
-Lock in long-term discipline when it comes to technical documentation and portfolio management.
-
-Stand on a practical engineering philosophy rooted in consistency, adaptability, accountability, and never stopping the grind.
-
-      ___ ___ ___   ___     ___ _____ ___  _   _  ___ _____ _   _ ___  ___ 
-     | _ \ __| _ \ / _ \   / __|_   _| _ \| | | |/ __|_   _| | | | _ \| __|
-     |   / _|  __/| (_) |  \__ \ | | |   /| |_| | (__  | | | |_| |   /| _| 
-     |_|_\___|_|   \___/   |___/ |_| |_|_\ \___/ \___| |_|  \___/|_|_\|___|
-
-    portfolio/
-    │
-    ├── artificial-intelligence/
-    ├── machine-learning/
-    ├── deep-learning/
-    ├── natural-language-processing/
-    ├── computer-vision/
-    ├── robotics-ros/
-    ├── cybersecurity-ai/
-    ├── data-science/
-    ├── digital-twins/
-    ├── virtualization/
-    ├── cloud-computing/
-    ├── databases/
-    ├── unix-linux/
-    ├── notebooks/
-    ├── simulations/
-    ├── presentations/
-    ├── video-lab-reports/
-    ├── research-materials/
-    ├── bibliography/
-    ├── documentation/
-    └── final-projects/
-
-Portfolio Components
-1. Jupyter Notebooks
-What’s in 'em:
-
-Experimental workflows & data analysis
-
-Machine learning models & visualization exercises
-
-Step-by-step progress and finalized code implementations
-
-Each notebook breaks down:
-
-The mission (Objectives) & the play-by-play (Methodologies)
-
-The scoreboard (Results) & the roadblocks (Challenges)
-
-How it got optimized, plus the final take and next steps
-
-The Goal: Show disciplined technical thinking, clean experimentation, and code that actually runs when someone else spins it up.
-
-2. Incremental Development Work
-We don't hide the ugly phases here. This repo preserves:
-
-Day-one prototypes & experimental flips
-
-Testing environments & debugging logs
-
-System tune-ups and the final, polished code
-
-Instead of acting like everything worked perfectly on the first try, this portfolio shows the whole journey—the setbacks, the rewrites, the troubleshooting, and the performance tweaks. Real growth comes from repetition, fixing your mistakes, adapting on the fly, and staying with it.
-
-3. Simulations & Lab Environments
-The Setup:
-
-Virtual machine deployments & cloud infra labs
-
-ROS simulations & digital twin experiments
-
-Network configurations & system integration testing
-
-Infrastructure automation
-
-The Stack: VirtualBox, VMware, Hyper-V, Proxmox, AWS, Azure, and heavy Linux environments.
-
-These setups are where the rubber meets the road for practical infrastructure engineering, sysadmin work, distributed computing, and deploying AI workflows for real.
-
-4. Video Lab Reports & Presentations
-The Tape:
-
-Technical walkthroughs & live demo videos
-
-Infrastructure presentations & system deployment recordings
-
-Research breakdowns & final project presentations
-
-This media is proof of work. It documents the exact deployment steps, how troubleshooting went down, and how the system actually behaves so everything is transparent and repeatable.
-
-5. Research & Bibliography
-We keep a deep library of research and educational gems throughout this repo.
-
-The Sources: Academic papers, technical documentation, industry whitepapers, instructional PDFs, online tutorials, video lectures, and official platform docs.
-
-The Filter: Everything is checked for accuracy, relevance, real-world utility, and alignment with where the industry is heading.
-
-The focus is strictly on learning material that bridges the gap between book smarts and street execution.
-
-Technical Areas Covered
-Artificial Intelligence & Data Tech
-Machine Learning, Deep Learning, & Neural Networks
-
-Natural Language Processing (NLP) & Computer Vision
-
-Databases, Data Analysis, Predictive Modeling, & Visualization
-
-Systems & Emerging Tech
-Virtualization, Cloud Computing, & Linux Administration
-
-Networking & Infrastructure Automation
-
-Robotics (ROS2) & Digital Twins
-
-AI Security Applications (Cybersecurity AI)
-
-Engineering Philosophy
-This whole portfolio is built on a few core commandments:
-
-Docs-first development (Write it down before you build it)
-
-Incremental improvement (Get 1% better every day)
-
-Technical transparency & reproducibility (No smoke and mirrors)
-
-Systems thinking & cross-disciplinary integration
-
-Real execution over theoretical talk
-
-Staying cool and adapting under technical pressure
-
-Solving the problem through persistence and disciplined iteration
-
-The Bottom Line: Knowledge don't mean much if you can't apply it, test it, tweak it, and make it run for real. This repo is the vault and the living lab all in one.
